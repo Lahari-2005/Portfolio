@@ -1,0 +1,474 @@
+/* ==================================
+   GOOGLE FONT
+================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==================================
+   GLOBAL STYLES
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080B18;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* ==================================
+   SCROLL PROGRESS BAR
+================================== */
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, #00BFFF, #8A2BE2);
+    z-index: 9999;
+}
+
+
+/* ==================================
+   NAVBAR
+================================== */
+
+.navbar {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    color: #00BFFF !important;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #00BFFF !important;
+}
+
+
+/* ==================================
+   COMMON SECTION
+================================== */
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    color: #00BFFF;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #bfbfbf;
+}
+#certifications .glass-card {
+    transition: transform 0.3s ease;
+}
+
+#certifications .glass-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ==================================
+   HERO SECTION
+================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero h4 {
+    color: #8A2BE2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 15px 0;
+}
+
+.hero h3 {
+    color: #00BFFF;
+    min-height: 45px;
+}
+
+.hero p {
+    color: #d0d0d0;
+    line-height: 1.8;
+}
+
+
+/* ==================================
+   BUTTONS
+================================== */
+
+.btn-primary {
+    background: linear-gradient(
+        45deg,
+        #00BFFF,
+        #8A2BE2
+    );
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00BFFF;
+}
+
+
+.btn-outline-light {
+    border-radius: 30px;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==================================
+   PROFILE IMAGE
+================================== */
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00BFFF;
+    box-shadow:
+        0 0 30px #00BFFF,
+        0 0 70px #8A2BE2;
+    transition: 0.4s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==================================
+   GLASSMORPHISM CARDS
+================================== */
+
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 25px;
+    transition: 0.4s;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #00BFFF;
+}
+
+.glass-card h3 {
+    color: #ffffff;
+}
+
+.glass-card p {
+    color: #d5d5d5;
+    line-height: 1.7;
+}
+
+
+/* ==================================
+   BADGES
+================================== */
+
+.badge {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+/* ==================================
+   ANIMATED BACKGROUND PARTICLES
+================================== */
+
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #00BFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #00BFFF;
+    opacity: 0.6;
+    animation: float 8s linear infinite;
+}
+
+.particles span:nth-child(1) {
+    left: 10%;
+    animation-duration: 10s;
+}
+
+.particles span:nth-child(2) {
+    left: 30%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(3) {
+    left: 50%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.particles span:nth-child(4) {
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(5) {
+    left: 90%;
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    50% {
+        transform: translateY(50vh) scale(1);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(0);
+    }
+}
+
+
+/* ==================================
+   SCROLL REVEAL ANIMATION
+================================== */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==================================
+   PROJECT IMAGES
+================================== */
+
+#projects img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+#projects .glass-card:hover img {
+    transform: scale(1.08);
+}
+
+#projects .glass-card:hover {
+    box-shadow:
+        0 0 25px #00BFFF,
+        0 0 50px #8A2BE2;
+}
+
+
+/* ==================================
+   CONTACT FORM
+================================== */
+
+.form-control {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.form-control::placeholder {
+    color: #cccccc;
+}
+
+.form-control:focus {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    border-color: #00BFFF;
+    box-shadow: 0 0 15px #00BFFF;
+}
+
+
+/* ==================================
+   SOCIAL ICONS
+================================== */
+
+.social-icons a {
+    color: white;
+    font-size: 1.7rem;
+    margin-right: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00BFFF;
+    text-shadow: 0 0 15px #00BFFF;
+    transform: translateY(-5px);
+}
+
+
+/* ==================================
+   FOOTER
+================================== */
+
+footer {
+    background: #050812;
+    color: #bbbbbb;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+
+/* ==================================
+   BACK TO TOP BUTTON
+================================== */
+
+#topBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00BFFF, #8A2BE2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    transition: 0.3s;
+    box-shadow: 0 0 25px #00BFFF;
+}
+
+#topBtn:hover {
+    transform: scale(1.15);
+    box-shadow:
+        0 0 35px #00BFFF,
+        0 0 60px #8A2BE2;
+}
+
+
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 992px) {
+
+    .hero {
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 280px;
+        height: 280px;
+        margin-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .navbar {
+        background: rgba(5, 8, 18, 0.95);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h3 {
+        font-size: 1.4rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+}
